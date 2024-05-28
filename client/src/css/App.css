@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap'); 
+/* fonts used in this webapp */
+
+
+
+.Container{ 
+  color:#FAF8F1;
+  font-family:'Inter', sans-serif;
+  display:grid;
+  grid-template-columns: 0.2fr 1fr 1fr; 
+  grid-template-rows: 0.2fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "sidebar nav     nav"
+    "sidebar content content"
+    "sidebar content content";
+  height:100vh;
+}
+/* contains sidebar, navbar and table */
+
+/* sidebar containing categories & buttons */
+.sidebar{ /*side part*/
+  grid-area: sidebar; 
+  background-color:#A67438;
+  width: 260px;
+}
+#title{ /*inventory tracker text*/
+  font-weight:900;
+  font-size:33px;
+  line-height:40px;
+  text-align:center;
+  text-transform:uppercase;
+  top:3vh;
+  float:left;
+  position:relative;
+}
+.sidecontent{ /*hello admin + category*/
+  position:relative;
+  top:10vh;
+  font-style:normal;
+  font-weight:400;
+  font-size: 33px;
+  line-height:40px;
+  left: 15px;
+}
+.sidecontent button{ /*buttons on the side*/
+  color:inherit;
+  border:none;
+  padding:10px 15px 10px 15px;
+  cursor:pointer;
+  font-style:inherit;
+  font-size:inherit;
+  font-weight:400;
+  border-radius: 15px;
+  position: fixed;
+  width: 230px;
+}
+.sidecontent #move-to-admin{ /*manage staff button*/
+  background:#DD9D34;
+  left: 15px;
+  bottom: 110px;
+}
+#move-to-admin:hover{
+  background:#e1a74a;
+  border:none;
+}
+.sidecontent #logout{ /*logout button*/
+  background:#F13F26;
+  left: 15px;
+  bottom: 30px;
+}
+#logout:hover{
+  background:#ff4f34;
+  border:none;
+}
+.sidebutton{ /*back button in account management page*/
+  background: #B8ABA9;
+  left: 15px;
+  bottom: 30px;
+}
+.sidebutton:hover{
+  background:#c3b8b6;
+  border:none;
+}
+
+#cancel_btn{ /*cancel button in delete page*/
+  bottom: 110px;
+  text-align:center;
+  justify-content:center;
+  background:#B8ABA9;
+  border:none;
+  border-radius:15px;
+  z-index: 1; /*covers manage staff button*/
+}
+#cancel_btn:hover{
+  background:#c6bab8;
+  border:none;
+}
+#delete_btn{ /*delete button in delete page*/
+  bottom: 30px;
+  text-align:center;
+  justify-content:center;
+  background:#F13F26;
+  border:none;
+  border-radius:15px;
+  z-index: 1; /*covers logout button*/
+}
+#delete_btn:hover{
+  background:#ff4f34;
+  border:none;
+}
+
+.nav{ /*top part*/
+  grid-area: nav; 
+  background-color:#A67438;
+}
+.nav ul{
+  padding-left:0;
+  margin-left:75vw;
+}
+#first{ /*home & account management text*/
+  position:absolute;
+  font-weight:800;
+  font-size:33px;
+  left: 280px;
+}
+.nav ul li{ /*add & delete button*/
+  display:inline;
+  padding:5px;
+}
+.nav button{
+  background:none;
+  color:inherit;
+  border:none;
+  padding:0;
+  cursor:pointer;
+  outline:inherit;
+}
+.add{
+  background:red;
+  display:relative;
+}
+
+
+
+
+.content { 
+  padding:5px;
+  grid-area: content; 
+  /* background-color:#FAF8F1; */
+  background:#FFFFFFFF     ;
+  overflow-x:scroll;
+  overflow-y:scroll;
+}
+.content span button{
+  background:none;
+  border: none;
+  border-radius:50%;
+  border:white solid 5px;
+  padding:10px;
+}
+
+
+.stock-edit button{
+  background:none;
+  color:#A67438;
+  margin:5px;
+  height: 10%;
+  width: 15%;
+  border-radius:50%;
+  border:#A67438 solid 2px;
+  padding:8px;
+  cursor:pointer;
+  font-weight:300;
+  font-size:15px;
+}
+.stock-edit input{
+  border-radius:30px;
+  padding: 10px;
+  height: 10px;
+  width: 25%;
+}
+
+.sales-edit button{
+  background:none;
+  color:#A67438;
+  margin:5px;
+  height: 10%;
+  width: 20%;
+  border-radius:50%;
+  border:#A67438 solid 2px;
+  padding:10px;
+  cursor:pointer;
+  font-weight:300;
+  font-size:15px;
+}
+.sales-edit input{
+  border-radius:30px;
+  padding: 10px;
+  height: 10px;
+  width: 30%;
+}
+.category-drop{
+  position:relative;
+  margin-top:1vh;
+  justify-content: center;
+  display:inline-block;
+  min-width:100px;
+  text-align:left;
+  width: 230px;
+  color: #A67438;
+  
+}
+
+
+.category-btn{
+  background:#FAF8F1;
+  color:#DDBC86;
+  border:5px solid #FAF8F1;
+  border-radius:25px;
+}
+
+.category-btn ul{
+  display:none;
+  position:absolute;
+  list-style:none;
+  padding-left:0;
+  margin-top:-0.5vh;
+  font-size:15px;
+}
+.category-btn ul li{
+  margin-top:1vh;
+  background:#DDBC86; 
+  border:2px solid #DDBC86;
+  border-radius:25px;
+  padding:5px;
+  min-width:125px;
+  color:#FAF8F1;
+  font-weight:600;
+  cursor:pointer;
+}
+.category-btn ul li:hover{
+  background:#DD9D34;
+  border:2px solid #DD9D34;
+}
+.category-btn ul li:active{
+  background:#A67438;
+  border:2px solid #ca8e44;
+}
+.category-text{
+  font-size:15px;
+  padding:12px 16px;
+  font-weight:600;
+}
+
+
+.category-btn:hover .arrow{
+  margin-bottom:2px;
+  border: solid #DDBC86;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.category-drop :hover ul{
+  display:block;
+}
+
+.category-down{
+  display: none;
+  position: absolute;
+  background-color: #FAF8F1;
+  min-width:100px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius:25px;
+  margin-top:1vh;
+}
+.arrow{
+  margin-left:5px;
+  margin-bottom:5px;
+  border: solid #DDBC86;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+.arrow-up{
+  margin-left:5px;
+  margin-bottom:2px;
+  border: solid #DDBC86;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+#SearchBar{
+  border-radius:30px;
+  border:5px solid #FAF8F1;
+  padding:5px;
+  position:fixed;
+  left:75vw;
+  top:1.4vw;
+  font:inherit;
+  /* left:-12vw;
+  top:1.75vw; */
+}

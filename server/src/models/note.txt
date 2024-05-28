@@ -1,0 +1,5 @@
+There's no explicit types here since Prisma generates their own types.
+
+You can refer to their models in the schema.prisma file
+Access to their generated types can be done with 
+`import { Type } from '@prisma/client'`
